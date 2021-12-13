@@ -1,0 +1,92 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Dancing+Script&family=Kalam&family=Long+Cang&family=Nerko+One&family=Noto+Sans+TC&family=Noto+Serif+TC&family=Oi&family=Patrick+Hand+SC&family=RocknRoll+One&family=Rubik&family=Sacramento&family=Source+Code+Pro&family=Ubuntu&display=swap');
+
+// override bootstrap breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  xxsm: 375px, // add
+  xsm: 425px, // add
+  sm: 576px,
+  md: 768px,
+  lg: 1024px
+);
+
+@import "~bootstrap/scss/bootstrap";
+
+@import "variables";
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.9rem;
+  position: relative;
+  background: #ffffff;
+
+  #root {
+    // position: relative;
+    // max-width: 540px;
+    min-width: 430px;
+    // margin: auto;
+    // padding: 0;
+    //overflow-x: hidden;
+    margin: 30px;
+    box-shadow: 3px 3px 10px rgb(0 0 0 / 80%);
+  }
+
+  .page-item-padding {
+    //padding-left: 1.5rem;
+    //padding-right: 1.5rem;
+  }
+
+  .background-color {
+    background-color: #{$background-color};
+    position: absolute;
+    z-index: -100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+  }
+
+  .check-info {
+    color: red;
+    font-size: 10px;
+  }
+  .check-info.hide {
+    display: none;
+  }
+
+  .price-text-color {
+    color: #dd5300;
+  }
+}
+
+.text-color {
+  color: #{$text-color};
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.change-webview {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 999999;
+  text-align: center;
+}
+
+#react-qrcode-logo {
+  width: 22% !important;
+  height: inherit !important;
+  position: absolute;
+  top: 19%;
+  left: 39%;
+  transform: rotate(-11deg);
+}
